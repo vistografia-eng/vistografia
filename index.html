@@ -8,7 +8,7 @@
 <meta name="description" content="Vistografia: criação de conteúdo, design e gestão de mídias sociais para marcas que querem ser vistas, lembradas e valorizadas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --black:#0a0a0a;
@@ -44,7 +44,7 @@
 
   .wrap{max-width:1240px;margin:0 auto;padding:0 32px;}
   .eyebrow{
-    font-family:'IBM Plex Mono',monospace;
+    
     font-size:12px;
     letter-spacing:.14em;
     text-transform:uppercase;
@@ -193,7 +193,7 @@
   }
   .marquee-group{display:flex;flex-shrink:0;}
   .marquee span{
-    font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.08em;
+    font-size:13px;letter-spacing:.08em;
     color:var(--gray-600);text-transform:uppercase;
     margin-right:48px;flex-shrink:0;
   }
@@ -207,7 +207,6 @@
   /* sobre */
   .sobre{background:var(--black);color:var(--paper);}
   .sobre .eyebrow{color:var(--gray-400);}
-  .sobre .eyebrow::before{background:var(--gray-600);}
   .sobre-grid{display:grid;grid-template-columns:1fr;gap:48px;}
   @media(min-width:900px){.sobre-grid{grid-template-columns:.9fr 1.1fr;gap:80px;align-items:start;}}
   .sobre-grid .lede{font-size:22px;font-family:'Space Grotesk',sans-serif;font-weight:500;line-height:1.35;color:var(--paper);}
@@ -225,7 +224,7 @@
     background:var(--white);padding:40px 32px;
     position:relative;overflow:hidden;
   }
-  .service-card .num{font-family:'IBM Plex Mono',monospace;font-size:12px;color:var(--gray-400);}
+  .service-card .num{font-size:12px;color:var(--gray-400);}
   .service-card h3{font-size:21px;margin:26px 0 12px;}
   .service-card p{color:var(--gray-600);font-size:15px;}
   .service-card .mark img{width:100%;height:100%;object-fit:contain;}
@@ -241,7 +240,6 @@
   .why .section-head p{color:var(--gray-400);}
   .why .eyebrow{color:var(--gray-400);}
   .why .section-head h2{color:var(--paper);}
-  .why .eyebrow::before{background:var(--gray-600);}
   .why-grid{display:grid;grid-template-columns:1fr;gap:1px;background:var(--line-dark);border:1px solid var(--line-dark);}
   @media(min-width:720px){.why-grid{grid-template-columns:repeat(2,1fr);}}
   @media(min-width:1100px){.why-grid{grid-template-columns:repeat(3,1fr);}}
@@ -256,7 +254,7 @@
   /* portfolio */
   .filters{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:64px;}
   .filter-btn{
-    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:.06em;
+    font-size:12px;letter-spacing:.06em;
     text-transform:uppercase;padding:10px 20px;border:1px solid var(--line);
     color:var(--gray-600);border-radius:0;
     transition:all .25s var(--ease);
@@ -284,7 +282,7 @@
   .pf-thumb:hover .pf-arrow{opacity:.85;transform:translate(0,0);}
   .pf-meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:16px;}
   .pf-meta h3{font-size:18px;font-weight:500;}
-  .pf-meta span{font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--gray-600);text-transform:uppercase;letter-spacing:.06em;}
+  .pf-meta span{font-size:11px;color:var(--gray-600);text-transform:uppercase;letter-spacing:.06em;}
   .pf-hidden{display:none;}
 
 
@@ -310,7 +308,7 @@
   form .full{grid-column:1/-1;}
   .field{display:flex;flex-direction:column;gap:8px;}
   .field label{
-    font-family:'IBM Plex Mono',monospace;font-size:11px;text-transform:uppercase;
+    font-size:11px;text-transform:uppercase;
     letter-spacing:.08em;color:var(--gray-600);
   }
   .field input,.field select,.field textarea{
@@ -347,6 +345,94 @@
 
   [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease);}
   [data-reveal].in{opacity:1;transform:translateY(0);}
+
+  /* ===== Visual do portal: cinzas, cantos arredondados, Inter + Space Grotesk ===== */
+  :root{--r:14px;--rs:10px;--soft:#f3f3f3;--sh:0 1px 2px rgba(0,0,0,.03);}
+  body{font-family:'Inter',system-ui,-apple-system,'Segoe UI',sans-serif;}
+  h1,h2,h3{font-family:'Space Grotesk','Inter',sans-serif;font-weight:600;letter-spacing:-.025em;}
+  :focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:var(--rs);}
+
+  /* textos de apoio em Inter simples, como no portal */
+  .eyebrow,.marquee span,.service-card .num,.filter-btn,.pf-meta span,.field label{
+    font-family:'Inter',system-ui,sans-serif;text-transform:none;letter-spacing:0;
+  }
+  /* texto de apoio simples, sem caixa e sem ponto */
+  .eyebrow{font-size:13px;font-weight:500;color:var(--gray-600);}
+  .marquee span{font-size:14px;font-weight:500;}
+  .service-card .num{font-size:13px;font-weight:500;}
+  .pf-meta span{font-size:12.5px;font-weight:500;}
+
+  /* header e navegação */
+  header{background:rgba(255,255,255,.88);}
+  nav.primary{gap:4px;}
+  nav.primary a:not(.btn){padding:8px 14px;border-radius:var(--rs);font-weight:500;}
+  nav.primary a:not(.btn)::after{display:none;}
+  nav.primary a:not(.btn):hover{background:var(--soft);color:var(--ink);}
+  .menu-toggle{
+    width:40px;height:40px;gap:5px;align-items:center;justify-content:center;
+    border:1px solid var(--line);border-radius:var(--rs);background:var(--white);
+  }
+  .menu-toggle span{width:18px;height:1.5px;border-radius:2px;}
+  nav.primary[style]{
+    border-radius:0 0 18px 18px;box-shadow:0 20px 40px rgba(0,0,0,.08);
+    padding:14px 16px 18px!important;gap:4px!important;
+  }
+
+  /* botões: cantos arredondados, texto simples (sem caixa alta), hover suave */
+  .btn{
+    border-radius:var(--rs);font-size:14px;font-weight:500;letter-spacing:0;text-transform:none;
+    min-height:44px;padding:0 20px;justify-content:center;
+  }
+  .btn-solid:hover{transform:none;opacity:.88;background:var(--ink);}
+  .btn-outline{background:var(--white);}
+  .btn-outline:hover{transform:none;border-color:var(--ink);background:var(--soft);}
+  .btn-ghost{border-radius:0;}
+  .hero-btn{min-height:54px;padding:0 28px;font-size:15px;text-transform:none;letter-spacing:0;}
+  nav.primary a.nav-portal{padding:0 22px;}
+
+  /* hero */
+  .hero-caption{font-size:14.5px;}
+  .marquee-wrap{border-radius:var(--r);border:1px solid var(--line);margin-left:32px;margin-right:32px;}
+  @media(min-width:1300px){.marquee-wrap{margin-left:auto;margin-right:auto;max-width:1176px;}}
+
+  /* serviços: cartões arredondados com respiro entre eles */
+  #servicos{border-color:transparent;}
+  .services-grid{gap:12px;background:none;border:0;}
+  .service-card{border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:34px 28px;}
+
+  /* diferenciais */
+  .why-grid{gap:12px;background:none;border:0;}
+  .why-item{border:1px solid var(--line-dark);border-radius:var(--r);background:#141414;}
+
+  /* portfólio: filtros viram abas segmentadas como no portal */
+  .filters{display:flex;gap:2px;background:var(--soft);padding:4px;border-radius:12px;width:fit-content;max-width:100%;overflow-x:auto;}
+  .filter-btn{border:0;border-radius:9px;padding:8px 16px;font-size:13px;font-weight:500;color:var(--gray-600);white-space:nowrap;background:none;}
+  .filter-btn:hover{background:none;color:var(--ink);border-color:transparent;}
+  .filter-btn.active,.filter-btn.active:hover{background:var(--white);color:var(--ink);font-weight:600;box-shadow:0 1px 3px rgba(0,0,0,.12);}
+  .pf-thumb{border-radius:var(--r);box-shadow:var(--sh);}
+  .pf-arrow{border-radius:50%;}
+  /* os cantos de "visor" não combinam com cantos arredondados */
+  .frame::before,.frame::after,.frame .fc1,.frame .fc2,.service-card .fc1,.service-card .fc2{display:none;}
+
+  /* contato */
+  .contact-links a{
+    border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);
+    text-transform:none;letter-spacing:0;font-size:15px;font-weight:500;
+  }
+  .contact-links a:first-child{border:1.5px solid var(--ink);}
+  .contact-links a:hover{padding-left:30px;}
+
+  /* formulário: campos com borda, cantos arredondados e foco com anel suave */
+  .field label{font-size:12.5px;font-weight:500;}
+  .field input,.field select,.field textarea{
+    border:1px solid var(--line);border-radius:var(--rs);background:var(--white);padding:11px 12px;
+    transition:border-color .25s var(--ease), box-shadow .25s var(--ease);
+  }
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--ink);box-shadow:0 0 0 3px rgba(128,128,128,.18);}
+  form .btn{width:fit-content;}
+
+  /* rodapé */
+  .footer-social a,.footer-links a{border-radius:var(--rs);}
 </style>
 </head>
 <body>
